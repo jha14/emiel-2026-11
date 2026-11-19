@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bulk 3' mRNA-seq reports</title>
+<style>
+  :root { color-scheme: light; --ink: #1c1917; --muted: #57534e; --line: #e7e5e4; --paper: #fafaf9; --card: #fff; --accent: #9f1239; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 16px/1.5 "Segoe UI", Helvetica, Arial, sans-serif; color: var(--ink); background: var(--paper); }
+  main { max-width: 920px; margin: 0 auto; padding: 40px 20px 72px; }
+  h1 { font-size: 1.8rem; font-weight: 650; letter-spacing: -0.02em; margin: 0 0 8px; }
+  .lede { color: var(--muted); margin: 0 0 28px; }
+  .notice { background: #fff7ed; border: 1px solid #fdba74; border-radius: 12px; padding: 18px 20px; margin-bottom: 32px; }
+  .notice h2 { margin: 0 0 8px; font-size: 1.15rem; }
+  .notice p { margin: 0 0 12px; }
+  .notice ol { margin: 0 0 14px; padding-left: 1.2rem; }
+  a.button { display: inline-block; background: var(--accent); color: #fff; text-decoration: none; font-weight: 650; padding: 10px 16px; border-radius: 8px; }
+  a.button:hover { background: #881337; }
+  h2.section { font-size: 1.05rem; margin: 0 0 12px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 12px; }
+  a.card { display: block; background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; color: inherit; text-decoration: none; }
+  a.card:hover { border-color: #a8a29e; }
+  .card strong { display: block; font-size: 1.02rem; }
+  .card span { display: block; color: var(--muted); font-size: 0.92rem; margin-top: 4px; }
+  footer { margin-top: 36px; color: var(--muted); font-size: 0.9rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Bulk 3' mRNA-seq reports</h1>
+  <p class="lede">Eleven separate studies. Open a batch to read the analysis. Tables linked inside each report can be downloaded from the same page.</p>
+
+  <section class="notice">
+    <h2>Please complete the GEO submission sheet</h2>
+    <p>Use NCBI’s own spreadsheet. Download it from the submission page, fill the experimental fields below, and send that file back.</p>
+    <p><a href="https://www.ncbi.nlm.nih.gov/geo/info/seq.html">GEO high-throughput submission instructions</a><br>
+    <a href="https://www.ncbi.nlm.nih.gov/geo/info/examples/seq_template.xlsx">GEO metadata spreadsheet (seq_template.xlsx)</a></p>
+    <p>Please fill the study title, summary, and overall design, and the sample handling: growth, treatment, extraction, and library construction. Also fill the sequencing instrument, organism, tissue or cell type, strain or donor, and the other characteristics you know from the experiment.</p>
+    <p>Leave the parts that start from the FASTQ files. We will add the file names, MD5 checksums, whether the reads are single-end, the library strategy, and the RNA-seq processing steps.</p>
+    <a class="button" href="https://www.ncbi.nlm.nih.gov/geo/info/examples/seq_template.xlsx">Download the GEO spreadsheet</a>
+  </section>
+
+  <h2 class="section">Reports</h2>
+  <div class="grid">
+    <a class="card" href="batch1/analysis.html"><strong>Batch 1 kidney</strong><span>Mouse · 12 received / 11 analysed · Control, Treatment</span></a>
+    <a class="card" href="batch2/analysis.html"><strong>Batch 2 aorta</strong><span>Mouse · 12 received / 10 analysed · Control, Treatment</span></a>
+    <a class="card" href="batch3/analysis.html"><strong>Batch 3 kidney</strong><span>Mouse · 12 samples · Control, Treatment</span></a>
+    <a class="card" href="batch4/analysis.html"><strong>Batch 4 CaSR</strong><span>Human · 16 samples · Control, Treatment 1–3</span></a>
+    <a class="card" href="batch5/analysis.html"><strong>Batch 5 kidney</strong><span>Mouse · 12 samples · Control, Treatment</span></a>
+    <a class="card" href="batch6/analysis.html"><strong>Batch 6 kidney</strong><span>Mouse · 12 samples · Control, Treatment</span></a>
+    <a class="card" href="batch7/analysis.html"><strong>Batch 7 kidney</strong><span>Mouse · 12 samples · Control, Treatment</span></a>
+    <a class="card" href="batch8/analysis.html"><strong>Batch 8 kidney</strong><span>Mouse · 12 samples · Control, Treatment</span></a>
+    <a class="card" href="batch9/analysis.html"><strong>Batch 9 BMDM</strong><span>Mouse · 16 samples · Control, Treatment</span></a>
+    <a class="card" href="batch10/analysis.html"><strong>Batch 10 EC</strong><span>Human · 10 samples · Control, Treatment</span></a>
+    <a class="card" href="batch11/analysis.html"><strong>Batch 11 Mac</strong><span>Human · 12 samples · Control, Treatment</span></a>
+  </div>
+  <footer>Each batch is a separate study. A positive log2 fold change in a report means higher in the group named before “versus”.</footer>
+</main>
+</body>
+</html>
